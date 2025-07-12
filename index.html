@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypingMaster Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-keyboard"></i>
+                <h1>TypingMaster Pro</h1>
+            </div>
+            <div class="theme-controls">
+                <select class="theme-selector" id="themeSelector">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="ocean">Ocean</option>
+                    <option value="forest">Forest</option>
+                    <option value="sunset">Sunset</option>
+                    <option value="purple">Purple</option>
+                </select>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="stats-panel">
+                <div class="stat-card">
+                    <div class="stat-value" id="wpm">0</div>
+                    <div class="stat-label">WPM</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="accuracy">100%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="timer">60</div>
+                    <div class="stat-label">Time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="cpm">0</div>
+                    <div class="stat-label">CPM</div>
+                </div>
+            </div>
+
+            <div class="typing-area">
+                <div class="text-display" id="textDisplay"></div>
+                <textarea 
+                    class="typing-input" 
+                    id="typingInput" 
+                    placeholder="Click here and start typing..."
+                    disabled
+                ></textarea>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-primary" id="startBtn">
+                    <i class="fas fa-play"></i>
+                    Start Test
+                </button>
+                <button class="btn btn-secondary" id="resetBtn">
+                    <i class="fas fa-redo"></i>
+                    Reset
+                </button>
+                <select class="time-selector" id="timeSelector">
+                    <option value="30">30s</option>
+                    <option value="60" selected>60s</option>
+                    <option value="120">2min</option>
+                    <option value="300">5min</option>
+                </select>
+            </div>
+
+            <div class="results" id="results" style="display: none;">
+                <div class="results-header">
+                    <h2>Test Complete!</h2>
+                    <div class="performance-badge" id="performanceBadge"></div>
+                </div>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-value" id="finalWPM">0</div>
+                        <div class="result-label">Words Per Minute</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-value" id="finalAccuracy">100%</div>
+                        <div class="result-label">Accuracy</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-value" id="finalCPM">0</div>
+                        <div class="result-label">Characters Per Minute</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-value" id="totalWords">0</div>
+                        <div class="result-label">Total Words</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="retryBtn">
+                    <i class="fas fa-redo"></i>
+                    Try Again
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
