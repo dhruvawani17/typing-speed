@@ -1,1 +1,1 @@
-# typing-speed test  best
+# typing-speed test
